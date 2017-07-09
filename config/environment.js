@@ -18,6 +18,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+          apiKey: "AIzaSyCGTN5qwyrI_O9WMRm0u86VVWTkHvfhH24",
+          authDomain: "super-rentals-7b873.firebaseapp.com",
+          databaseURL: "https://super-rentals-7b873.firebaseio.com",
+          storageBucket: "super-rentals-7b873.appspot.com",
+        },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
