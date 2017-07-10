@@ -3,11 +3,11 @@
 
 We hope you find exactly what you're looking for in a place to stay.
 
-<ul>
+<article class="listing">
   {{#each model as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
-</ul>
+</article>
 
 {{new-rental saveRental2="saveRental3"}} {{! new-rental is the component, save2 is the var of the com and save3 name of action saving on the route}}
 
