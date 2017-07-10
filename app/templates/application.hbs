@@ -1,9 +1,7 @@
 <div class="container">
   <div class="menu">
     {{#link-to 'index'}}
-    <h1>
-      <em>SuperRentals</em>
-    </h1>
+    <h3><em>SuperRentals</em></h3>
     {{/link-to}}
     <div class="links">
       {{#link-to 'about'}}
@@ -14,7 +12,12 @@
              {{/link-to}}
            </div>
          </div>
-         <div class="body">
-           {{outlet}}
-         </div>
-       </div>
+  <header class="jumborton">
+    <h1>Super rentals</h1>
+  </header>
+  {{outlet}}
+  <hr>
+  <footer>
+    {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}
+  </footer>
+</div>

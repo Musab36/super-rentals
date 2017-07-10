@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
+  this.route('rental', {path: '/rental/:rental_id'}); //A dynamic segment getting the single property requested by id
 });
 
 export default Router;

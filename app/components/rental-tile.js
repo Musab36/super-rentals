@@ -9,13 +9,6 @@ export default Ember.Component.extend({
     imageHide: function() {
       this.set('isImageShowing', false); //When the image is clicked, it's set back false again
     },
-    update(rental, params) { // Parent component receives the action from the child component and passes it own
-      this.sendAction('update', rental, params);
-    },
-    delete(rental) { // Delete rental
-      if (confirm('Are you sure you want to delete this rental?')) { // Confirmation popup
-        this.sendAction('destroyRental', rental); //Sending action destroyRental trough the template into the Route handler
-      }
-    }
+
   }
 });
