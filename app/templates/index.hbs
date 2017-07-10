@@ -1,14 +1,15 @@
+{{!Our home page}}
 <h1> Welcome to Super Rentals </h1>
 
 We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
   {{#each model as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 
-{{new-rental saveRental2="saveRental3"}}
+{{new-rental saveRental2="saveRental3"}} {{! new-rental is the component, save2 is the var of the com and save3 name of action saving on the route}}
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}

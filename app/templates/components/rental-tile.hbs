@@ -1,9 +1,11 @@
+{{! Component for showing, hiding images and deleting rentals}}
 <li>
   {{rental.owner}}'s {{rental.type}} in {{rental.city}}
   {{#if isImageShowing }}
     <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
   {{else}}
-    <button {{action 'imageShow'}}>Show image</button>
+    <button class="button" {{action 'imageShow'}}>Show image</button>
   {{/if}}
+ {{update-rental rental=rental update="update"}} {{! Update component}}
   <button {{action 'delete' rental}}>Delete Rental</button>
 </li>

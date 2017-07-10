@@ -1,35 +1,35 @@
-{{#if addNewRental}}
+{{#if addNewRental}} {{!If form rental is set to true,the form will show}}
   <h1>New Rental</h1>
   <div>
     <form>
       <div class="form-group">
-        <label for="owner">Owner</label>
+        <label for="owner">Owner</label><br>
         {{input value=owner id="owner"}}
       </div>
 
       <div class="form-group">
-        <label for="type">Type</label>
+        <label for="type">Type</label><br>
         {{input value=type id="type"}}
       </div>
 
       <div class="form-group">
-        <label for="city">City</label>
+        <label for="city">City</label><br>
         {{input value=city id="city"}}
       </div>
 
       <div class="form-group">
-        <label for="bedrooms">Number of Bedrooms</label>
+        <label for="bedrooms">Number of Bedrooms</label><br>
         {{input value=bedrooms id="bedrooms"}}
       </div>
 
       <div class="form-group">
-        <label for="image">Image URL</label>
+        <label for="image">Image URL</label><br>
         {{input value=image id="image"}}
-      </div>
+      </div><br>
 
-      <button {{action 'saveRental1'}}>Save</button>
+      <button class="button" {{action 'saveRental1'}}>Save</button> {{!Submit button to begin the process of saving the new rental added by a user.}}
     </form>
   </div>
 {{else}}
-  <button {{action 'rentalFormShow'}}>New Rental</button>
+  <button class="button" {{action 'rentalFormShow'}}>New Rental</button> {{!If it's false,the button will be shown}}
 {{/if}}
