@@ -18,6 +18,15 @@ export default Ember.Route.extend({
     destroyRental(rental) { // The action sent by the component rental-tile to delete rentals: Data down, actions up
       rental.destroyRecord();
       this.transitionTo('index'); // Returning to the index page after deleting a rental
+    },
+    saveReview(params) {
+      var newReview = this.store.createRecord('review', params);
+      var rental = params.rental;
+      rental.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return rental.save();
+      });
+      this.transitionTo('rental', rental);
     }
  }
 });

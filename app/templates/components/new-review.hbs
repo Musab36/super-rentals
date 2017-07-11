@@ -1,0 +1,23 @@
+{{! A component with a form for the new reviews that will be displayed in the index page}}
+{{#if addNewReview}}
+<h1>New Review</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Author</label><br>
+        {{input value=author id="author"}}
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating</label><br>
+        {{input value=rating id="rating"}}
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label><br>
+        {{input value=content id="content"}}
+      </div>
+      <button class="button" {{action 'saveReview'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button class="button" {{action 'reviewFormShow'}}>New Review</button>
+{{/if}}

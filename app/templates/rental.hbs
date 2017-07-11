@@ -4,3 +4,5 @@ we can access its miscellaneous properties by calling model directly (ie: model.
 {{update-rental rental=model update=update}}
 {{!We are rendering the component here defining the component's var as the current model}}
 {{rental-detail rental=model destroyRental=destroyRental}}
+
+{{new-review saveReview="saveReview" rental=model}}
