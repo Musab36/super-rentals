@@ -4,25 +4,14 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <h2 class="text-primary"> Available Rentals </h2>
 
-<ul>
+<article class="listing">
   {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
-</ul>
+</article>
 
 {{new-rental saveRental2="saveRental3"}}
 
-<h2 class="text-success"> All Reviews </h2>
-
-<ul>
-  {{#each model.reviews as |review|}}
-    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
-  {{/each}}
-</ul>
-
-{{new-review saveReview="saveReview"}} {{!Action saveReview recieved from new-reveiw.js and is sent to the index.js}}
-
-<hr>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}

@@ -3,4 +3,11 @@ is available by arrangement through {{rental.owner}}
 <br>
 <p><img src={{rental.image}} alt={{rental.type}}></p>
 
-  <button class="button" {{action 'delete' rental}}>Delete</button>
+<H2> Review </H2>
+<ul>
+  {{#each rental.reviews as |review|}}
+  {{review-tile review=review destroyReview="destroyReview"}}
+  {{/each}}
+</ul>
+
+  <button class="btn-lg btn-danger" {{action 'delete' rental}}>Delete</button>
