@@ -1,9 +1,14 @@
-body {
-  background-color: #333;
-}
 .listing {
   background-color: cyan;
 }
 button {
   margin-top: 10px;
+}
+button:hover {
+  color: cyan;
+  background-color: black;
+}
+.map-display {
+  height: 600px;
+  width: 600px;
 }

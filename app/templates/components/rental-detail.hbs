@@ -5,9 +5,14 @@ is available by arrangement through {{rental.owner}}
 
 <h2 class="text-warning"> Review </h2>
 <ul>
-  {{#each rental.reviews as |review|}}
-  {{review-tile review=review destroyReview="destroyReview"}}
+  {{#each sortedReviews as |review|}}
+   {{review-tile review=review destroyReview="destroyReview"}}
   {{/each}}
 </ul>
+
+<div>
+  <h3>Map of {{rental.owner}}'s {{rental.type}}</h3>
+  {{google-map rental=rental}}
+</div>
 
   <button class="btn-lg btn-danger" {{action 'delete' rental}}>Delete</button>

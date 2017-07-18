@@ -6,7 +6,7 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <article class="listing">
   {{#each model.rentals as |rental|}}
-    {{rental-tile rental=rental}}
+     {{rental-popularity rental}} {{rental-tile rental=rental}} {{rental-cost rental}}
   {{/each}}
 </article>
 

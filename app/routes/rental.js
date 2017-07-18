@@ -13,7 +13,7 @@ export default Ember.Route.extend({
        }
      });
      rental.save(); // After looping through all of the keys, save the rental,
-     this.transitionTo('index'); // We return back the index home page to display the updates
+     this.transitionTo('rental'); // We return back the index home page to display the updates
    },
     destroyRental(rental) { // The action sent by the component rental-tile to delete rentals: Data down, actions up
       var review_deletions = rental.get('reviews').map(function(review) { // Deleting reviews one by one

@@ -1,7 +1,7 @@
 {{!since the model in our rental route represents a single record,
 we can access its miscellaneous properties by calling model directly (ie: model.owner, model.type, }}
 <h2>More information about {{model.owner}}'s {{model.type}}:</h2>
-{{update-rental rental=model update=update}}
+{{update-rental rental=model update="update"}}
 {{!We are rendering the component here defining the component's var as the current model}}
 {{rental-detail rental=model destroyRental="destroyRental" destroyReview="destroyReview"}}
 
