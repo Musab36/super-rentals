@@ -14,9 +14,7 @@ export default Ember.Component.extend({
         type: this.get('type'),
         image: this.get('image'),
         bedrooms: this.get('bedrooms'),
-        cost: parseInt(this.get('const')),
-        latitude: this.get('latitude'),
-        lpngitude: this.get('longitude')
+        cost: parseInt(this.get('const'))
       };
       this.set('addNewRental', false); // After clicking save, the form display is set back to false
       this.sendAction('saveRental2', params); // The component sends action through the template into the route handler sending with it the params
